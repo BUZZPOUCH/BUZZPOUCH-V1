@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>$POUCH</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      font-family: Arial, sans-serif;
+    }
+    .section {
+      width: 100%;
+    }
+    .section img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .buy-link {
+      position: absolute;
+      top: 78%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f9c000;
+      color: #000;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      z-index: 10;
+    }
+    .buy-link:hover {
+      background: #ffe000;
+    }
+    .button-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    /* Juice drop animation */
+    .juice-drip {
+      position: absolute;
+      top: 88%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      background: #f9c000;
+      border-radius: 50%;
+      animation: drip 2.5s infinite ease-in-out;
+      z-index: 5;
+    }
+
+    @keyframes drip {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0);
+      }
+      30% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(10px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(20px);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(30px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="button-wrapper">
+      <img src="header.png" alt="Header">
+      <a class="buy-link" href="https://app.uniswap.org/swap?outputCurrency=0xA9DfDbF810Aace17a770FC431C47f96A7738Cf2D&chain=base" target="_blank">Buy on Uniswap 🍏</a>
+      <div class="juice-drip"></div>
+    </div>
+  </div>
+  <div class="section">
+    <img src="homepage.png" alt="Homepage">
+  </div>
+</body>
+</html>
